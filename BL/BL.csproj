@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C2C52685-E078-40D7-8A57-7C7EC6727690}</ProjectGuid>
+    <ProjectGuid>{D9159F9F-8FF6-435F-AB05-171F41770C70}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BE</RootNamespace>
-    <AssemblyName>BE</AssemblyName>
+    <RootNamespace>BL</RootNamespace>
+    <AssemblyName>BL</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,15 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BankAccount.cs" />
-    <Compile Include="Configuration.cs" />
-    <Compile Include="Enums.cs" />
-    <Compile Include="GuestRequest.cs" />
-    <Compile Include="Host.cs" />
-    <Compile Include="HostingUnit.cs" />
-    <Compile Include="MyBe.cs" />
-    <Compile Include="Order.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{c2c52685-e078-40d7-8a57-7c7ec6727690}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{e08b9c6a-c37f-4676-85c4-e7f130c5e2e9}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
