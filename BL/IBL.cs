@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BE;
+
 
 namespace BL
 {
@@ -16,10 +16,12 @@ namespace BL
         void SetHostingUnit();
         bool AddOrder();
         void SetOrder();
-        List<HostingUnit> AvailableHostingUnits(DateTime entry, Int32 vactiondays);
+        List<BE.HostingUnit> AvailableHostingUnits(DateTime entry, Int32 vactiondays);
         Int32 NumDays(DateTime start, DateTime end);
         Int32 NumDays(DateTime start);
-
+        List<BE.Order> OrderExistenceEqualsDays(Int32 days);
+        Int32 NumOfInvetations(BE.GuestRequest costumer);//??????????????
+        Int32 NumOfSuccessfullOrders(BE.HostingUnit hostingunit);
 
     }
 }

@@ -8,9 +8,14 @@ namespace DAL
 {
     public class Factory
     {
-        public static Idal GetDal()
+        public static Idal GetDal(string typeDAL)
         {
-            return new Dal_imp();
+            switch (typeDAL)
+            {
+                case "List": return Dal_imp.Instance;
+                //  case "XML": return DAL_XML.Instance;
+                default: return null;
+            }
         }
     }
 }

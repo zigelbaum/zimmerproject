@@ -7,23 +7,32 @@ using BE;
 
 namespace DAL
 {
-    class Dal_imp : Idal
+    public class Dal_imp : Idal
     {
         #region Singleton
+        //private static Dal_imp instance;
+        //private Dal_imp() {}
+        //public static Dal_imp Instance
+        //{
+        //    get
+        //    {
+        //        if (instance == null)
+        //            instance = new Dal_imp();
+        //        return instance;
+        //    }
+        //}
         private static readonly Dal_imp instance = new Dal_imp();
-        private Dal_imp()
-        { }
         public static Dal_imp Instance
         {
             get { return instance; }
         }
-
-        static Dal_imp() {}//????????????
+        private Dal_imp(){ }
+        static Dal_imp() { }//????????????
         #endregion
-        public bool AddGuestRequest()
-        {
-            //has to be written
-            return true;
-        }
+        //public bool AddGuestRequest()
+        //{
+        //    //has to be written
+        //    return true;
+        //}
     }
 }
