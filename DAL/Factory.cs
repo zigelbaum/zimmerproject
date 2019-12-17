@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BL
+namespace DAL
 {
-    public class Class1
+    public class Factory
     {
+        public static Idal GetDal()
+        {
+            return new Dal_imp();
+        }
     }
 }

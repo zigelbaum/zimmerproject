@@ -14,7 +14,7 @@ namespace BE
         String FamilyName { get; set; }
         String PhoneNumber { get; set; }
         String MailAddress { get; set; }
-        String BankAccount { get; set; }
+        BankAccount BankAccount { get; set; }//might be confused
         String CollectionClearance { get; set; }
         #region
 

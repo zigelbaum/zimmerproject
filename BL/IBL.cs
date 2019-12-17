@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BE;
 
-namespace DAL
+namespace BL
 {
-    public interface Idal
+    public interface IBL
     {
         bool AddGuestRequest();
         void SetGuestRequest();
         bool AddHostingUnit();
         bool DeleteHostingUnit();
         void SetHostingUnit();
-        bool addOrder();
-        void setOrder();
-        //List< > GetHostingUnitList();
-        //List<?guestRequest?> GetCustomerList();
-        //List<Order> GetOrdersList();
-        //List<BankAccount> GetBankBranches();
+        bool AddOrder();
+        void SetOrder();
+        List<HostingUnit> AvailableHostingUnits(DateTime entry, Int32 vactiondays);
+        Int32 NumDays(DateTime start, DateTime end);
+        Int32 NumDays(DateTime start);
+
 
     }
 }

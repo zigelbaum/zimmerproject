@@ -10,7 +10,7 @@ namespace BE
     {
         #region fileds
 
-        Int32 _HostingUnitKey = 10000000;
+        Int32 _HostingUnitKey = Configuration.HostingUnitKey;
         Host _Owner;
         string _HostingUnitName;
         bool [,] _Diary;

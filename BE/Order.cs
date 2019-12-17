@@ -12,7 +12,7 @@ namespace BE
 
         Int32 _HostingUnitKey;
         Int32 _GuestRequestKey;
-        Int32 _OrderKey = 20000000;
+        Int32 _OrderKey = Configuration.OrderKey;
         Enums.OrderStatus _Status;
         DateTime CreateDate;
         DateTime OrderDate;
